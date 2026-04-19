@@ -1,18 +1,73 @@
+:root {
+  --color-principal: rgb(43, 133, 181);
+  --color-secundario: rgb(131, 191, 244);
+  --color-hover: rgb(22, 64, 119);
+}
 body {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(imagenes/fondo.jpg);
+    url(../imagenes/fondo.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .logo-img {
-  height: 150px;
+  height: 90px;
   width: auto;
   transition: transform 0.3s ease;
 }
 .logo-img:hover {
   transform: scale(1.05);
+}
+.log-gab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 150px;
+  padding: 0 20px;
+  background: linear-gradient(
+    90deg,
+    var(--color-principal),
+    var(--color-secundario)
+  );
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
+}
+nav {
+  background: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
+}
+li a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3 ease;
+}
+li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-hover);
+  transition: width 0.3s ease;
+}
+li a:hover {
+  color: var(--color-hover);
+}
+li a:hover::after {
+  width: 100%;
 }
 .principal {
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
