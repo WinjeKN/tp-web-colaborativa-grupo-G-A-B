@@ -3,6 +3,7 @@
   --color-secundario: rgb(131, 191, 244);
   --color-hover: rgb(22, 64, 119);
 }
+/*estilo del fondo de la página con una imagen de fondo*/
 body {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -11,6 +12,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+/*estilo para el logo desde logo-img hasta lag-gab*/
 .logo-img {
   height: 90px;
   width: auto;
@@ -33,6 +35,7 @@ body {
   );
   box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
 }
+/*formas que le damos a nuestra barra de navegación. Desde nav hasta li a:hover*/
 nav {
   background: none;
 }
@@ -69,6 +72,7 @@ li a:hover {
 li a:hover::after {
   width: 100%;
 }
+/*estilos para la parte principal del menu con las diferente variedades*/
 .principal {
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
   text-transform: uppercase;
@@ -93,7 +97,7 @@ li a:hover::after {
     sans-serif;
   font-size: 2rem;
 }
-
+/*formas que le damos a la variedad de bebidas*/
 .bebidas {
   text-align: center;
   font-family:
@@ -112,11 +116,12 @@ li a:hover::after {
 }
 
 .contenedor {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; /*lo usamos para que el contenido lo ordene en filas y columnas*/
+  grid-template-columns: repeat(3, 1fr); /*crea 3 columnas que se ordena en 1*/
   gap: 20px;
   margin: 20px;
 }
+/*aca le damos algunas estilos a nuestros item(variedad del menu*/
 .item {
   border-radius: 10px;
   border: none; /*10px solid rgb(18, 214, 228);*/
@@ -124,7 +129,9 @@ li a:hover::after {
   padding: 10px;
   transition: 0.3s;
 }
+
 .item:hover {
+  /*aca le da estilo a cada variedad al pasar con el cursor del mouse*/
   background-color: slategray;
   color: rgb(253, 253, 253);
   /*transform: scale(1.05);*/
@@ -132,6 +139,7 @@ li a:hover::after {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 .ordenar {
+  /*estilos a nuestro botom de ordenar en cada variedad*/
   background-color: saddlebrown;
   color: white;
   border: none;
@@ -145,6 +153,7 @@ li a:hover::after {
   border: 1px solid rgb(0, 0, 0);
 }
 .contenedor2 {
+  /*lo mismo al contenedor 1*/
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -171,13 +180,15 @@ li a:hover::after {
   color: white;
 }
 .contenedor3 {
+  /*lo mismo que a nuestros dos contenedores*/
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 20px;
 }
+/*estilos para nuestro footer*/
 footer {
-  background-color: rgb(4, 217, 245);
+  background-color: var(--color-principal);
   color: white;
   text-align: center;
   transition: background-color 0.5s ease;
